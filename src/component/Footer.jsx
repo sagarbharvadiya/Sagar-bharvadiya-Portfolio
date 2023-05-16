@@ -37,7 +37,7 @@ const Footer = () => {
         )}
         {/* <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> */}
         <div className="social-links">
-          <a href="https://github.com/sagarbharvadiya/" rel="noreferrer" target="_blank" className="github"><i class="fa-brands fa-github"></i></a>
+          <a href="https://github.com/sagarbharvadiya/" rel="noreferrer" target="_blank" className="github"><i className="fa-brands fa-github"></i></a>
           <a href="https://www.instagram.com/sagar__yadav__dwarka" rel="noreferrer" target="_blank" className="instagram"><i className="fa-brands fa-instagram"></i></a>
           <a href="https://join.skype.com/invite/wndzoaqlmJUE" rel="noreferrer" target="_blank" className="google-plus"><i className="fa-brands fa-skype"></i></a>
           <a href="https://www.linkedin.com/in/sagar-bharvadiya-dwarka/" rel="noreferrer" target="_blank" className="linkedin"><i className="fa-brands fa-linkedin"></i></a>

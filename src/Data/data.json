@@ -32,7 +32,7 @@
             "id": 5,
             "img": "../image/maesto.png",
             "link": "https://maestropizza.netlify.app/",
-            "title": "Meastro Pixaa",
+            "title": "Meastro Pizza",
             "button": "Quick View"
         },
         {
@@ -55,6 +55,43 @@
             "link": "https://saata.netlify.app/",
             "title": "Saata",
             "button": "Quick View"
+        }
+    ],
+    "whatICanDO":[
+        {
+            "id":1,
+            "img":"../image/html.png",
+            "brand":"HTML"
+        },
+        {
+            "id":"2",
+            "img":"../image/css.png",
+            "brand":"CSS"
+        },
+        {
+            "id":3,
+            "img":"../image/Js.png",
+            "brand":"JAVASCRIPT"
+        },
+        {
+            "id":"4",
+            "img":"../image/jquery.png",
+            "brand":"JQUERY"
+        },
+        {
+            "id":5,
+            "img":"../image/react.png",
+            "brand":"REACT"
+        },
+        {
+            "id":"6",
+            "img":"../image/Bootstrap_logo.svg.png",
+            "brand":"BOOTSTRAP"
+        },
+        {
+            "id":"7",
+            "img":"../image/contentful.png",
+            "brand":"CONTENT FUL"
         }
     ]
 }
