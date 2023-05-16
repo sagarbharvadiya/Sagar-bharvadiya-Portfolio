@@ -1,5 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -13,7 +14,7 @@ body {
   background: #101010;
   color: #fff;
   /* font-family: 'Open Sans', sans-serif; */
-  font-family: Dosis,sans-serif;
+  font-family: Dosis, sans-serif;
 }
 
 /* header css  */
@@ -73,7 +74,7 @@ body {
 .header__toggle-icon {
   display: block;
   position: absolute;
-  top: 34px;
+  top: 25px;
   right: 6px;
   /* transform: t
   /* background-color: #333; */
@@ -130,13 +131,15 @@ body {
 }
 
 .banner-left-btn {
-  max-width: 140px;
+
+  max-width: 130px;
   text-align: center;
-  padding: 15px 32px;
+  padding: 4px 20px;
   color: white;
   border-radius: 30px;
-  font-size: 17px;
+  font-size: 22px;
   background: #f1b722;
+
 }
 
 .banner-left-btn a {
@@ -231,8 +234,13 @@ body {
 }
 
 .about-us-left-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  /* font-size: 36px; */
+  margin-bottom: 35px;
+  color: #eef0f2;
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  line-height: 0;
 }
 
 .about-us-left-section p {
@@ -263,8 +271,13 @@ body {
 }
 
 .what-i-do-wrapper h2 {
-  font-size: 40px;
+  /* font-size: 40px; */
   text-align: center;
+  color: #eef0f2;
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  line-height: 0;
 }
 
 .what-i-do-folder {
@@ -296,19 +309,14 @@ section#contact {
 }
 
 .section-title span {
-  position: absolute;
-  top: 30px;
   color: #eef0f2;
-  left: 0;
-  right: 0;
-  z-index: 1;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 45px;
   text-transform: uppercase;
   line-height: 0;
 }
 
-.section-title h2 {
+/* .section-title h2 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
@@ -317,7 +325,7 @@ section#contact {
   color: #3b434a;
   position: relative;
   z-index: 2;
-}
+} */
 
 .section-title p {
   margin-bottom: 0;
@@ -575,7 +583,8 @@ section#contact {
     margin-bottom: 10px;
     text-align: center;
     margin: 30px 0px;
-}
+  }
+
   .about-us-left-section p {
     font-size: 16px;
     margin-bottom: 20px;

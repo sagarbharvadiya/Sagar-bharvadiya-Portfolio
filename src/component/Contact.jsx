@@ -7,7 +7,7 @@ const Contact = () => {
                 <div className="container">
                     <div className="section-title">
                         <span>Contact Me</span>
-                        <h2>Contact Me</h2>
+                        {/* <h2>Contact Me</h2> */}
                         {/* <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> */}
                     </div>
                     <div className="row">
@@ -20,7 +20,7 @@ const Contact = () => {
                                         <h3>Social Profiles</h3>
                                         <div className="social-links">
 
-                                            <a href="https://www.facebook.com/sagar.ahirbharvadiya" rel="noreferrer" target="_blank" className="facebook"><i className="fa-brands fa-facebook"></i></a>
+                                        <a href="https://github.com/sagarbharvadiya/" rel="noreferrer" target="_blank" className="github"><i class="fa-brands fa-github"></i></a>
                                             <a href="https://www.instagram.com/sagar__yadav__dwarka" rel="noreferrer" target="_blank" className="instagram"><i className="fa-brands fa-instagram"></i></a>
                                             <a href="https://join.skype.com/invite/wndzoaqlmJUE" rel="noreferrer" target="_blank" className="google-plus"><i className="fa-brands fa-skype"></i></a>
                                             <a href="https://www.linkedin.com/in/sagar-bharvadiya-dwarka/" rel="noreferrer" target="_blank" className="linkedin"><i className="fa-brands fa-linkedin"></i></a>

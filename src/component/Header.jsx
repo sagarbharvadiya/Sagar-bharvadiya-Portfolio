@@ -34,7 +34,7 @@ function Header() {
               rel="noreferrer"
             > */}
             <a
-              href="https://drive.google.com/file/d/11vQi12XEAWdsnnAsvtm6RmfLdrmdJmwq/view?usp=share_link"
+              href="../image/SagarBharvadiyaResume.pdf"
               target="_blank"
               rel="noreferrer"
             >
