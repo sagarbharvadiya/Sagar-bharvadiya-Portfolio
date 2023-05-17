@@ -1,44 +1,94 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
-
 const ContactForm = () => {
-  const from = useRef()
+  const formRef = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedEmails, setSubmittedEmails] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_q8aitnb', 'template_echkeug', e.target, 'wmdInJSGadcXUjwDA')
+    const userEmail = e.target.user_email.value;
+
+    if (submittedEmails.includes(userEmail)) {
+      console.log('Email already submitted');
+      return;
+    }
+
+    setIsLoading(true);
+
+    emailjs
+      .sendForm('service_q8aitnb', 'template_echkeug', e.target, 'wmdInJSGadcXUjwDA')
       .then((result) => {
         console.log(result.text);
-        // Handle success
-      }, (error) => {
+        setIsSubmitted(true);
+        setSubmittedEmails((prevEmails) => [...prevEmails, userEmail]);
+      })
+      .catch((error) => {
         console.log(error.text);
         // Handle error
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
 
-    e.target.reset();
+    formRef.current.reset();
   };
+
   return (
-    <form className="php-email-form" ref={from} onSubmit={handleSubmit}>
+    <form className="php-email-form" ref={formRef} onSubmit={handleSubmit}>
       <div className="row">
         <div className="col-md-6 form-group">
-          <input type="text" name="user_name" className="form-control" id="name" placeholder="Your Name" required />
+          <input
+            type="text"
+            name="user_name"
+            className="form-control"
+            id="name"
+            placeholder="Your Name"
+            required
+            disabled={isSubmitted || isLoading}
+          />
         </div>
         <div className="col-md-6 form-group mt-3 mt-md-0">
-          
-          <input type="email" name="user_email"  className="form-control" id="email" placeholder="Your Email" required/>
+          <input
+            type="email"
+            name="user_email"
+            className="form-control"
+            id="email"
+            placeholder="Your Email"
+            required
+            disabled={isSubmitted || isLoading}
+          />
         </div>
       </div>
       <div className="form-group mt-3">
-        <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
+        <input
+          type="text"
+          className="form-control"
+          name="subject"
+          id="subject"
+          placeholder="Subject"
+          required
+          disabled={isSubmitted || isLoading}
+        />
       </div>
       <div className="form-group mt-3">
-        <textarea className="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+        <textarea
+          className="form-control"
+          name="message"
+          rows="6"
+          placeholder="Message"
+          required
+          disabled={isSubmitted || isLoading}
+        ></textarea>
       </div>
-      <div className="my-3">
-      </div>
+      <div className="my-3"></div>
       <div className="text-center">
-        <button type="submit">Send Message</button>
+        <button type="submit" disabled={isSubmitted || isLoading}>
+          {isLoading ? 'Loading...' : isSubmitted ? 'Submitted' : 'Send Message'}
+        </button>
       </div>
     </form>
   );

@@ -11,6 +11,7 @@ const WhatIDo = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true, // Add this line to enable autoplay
         responsive: [
             {
                 breakpoint: 767,
@@ -26,11 +27,10 @@ const WhatIDo = () => {
             },
         ],
     };
-
     return (
         <div className="what-i-do-section">
             <div className="what-i-do-wrapper">
-                <h2>What I Can Do</h2>
+                <h2>What Can I Do</h2>
                 <div className="what-i-do-slider">
                     <div className='container'>
                         <Slider {...settings}>{
