@@ -3,9 +3,13 @@ import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const formRef = useRef();
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedEmails, setSubmittedEmails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const keyId = process.env.REACT_APP_KEY_ID;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +24,7 @@ const ContactForm = () => {
     setIsLoading(true);
 
     emailjs
-      .sendForm('service_q8aitnb', 'template_echkeug', e.target, 'wmdInJSGadcXUjwDA')
+      .sendForm(serviceId, templateId, e.target, keyId)
       .then((result) => {
         console.log(result.text);
         setIsSubmitted(true);
