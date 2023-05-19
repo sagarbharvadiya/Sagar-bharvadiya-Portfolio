@@ -6,6 +6,7 @@ import Contact from '../component/Contact'
 import Project from '../component/Project'
 
 
+
 const Home = () => {
   return (
     <>
